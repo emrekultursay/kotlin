@@ -58,6 +58,6 @@ data class KotlinAbiVersion(val major: Int, val minor: Int, val patch: Int) {
     override fun toString() = "$major.$minor.$patch"
 
     companion object {
-        val CURRENT = KotlinAbiVersion(1, 4, 1)
+        val CURRENT = KotlinAbiVersion(1, 4, 2)
     }
 }
