@@ -15027,6 +15027,11 @@ public class DiagnosticsTestGenerated extends AbstractDiagnosticsTestWithFirVali
                 KotlinTestUtils.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/diagnostics/tests/multiplatform"), Pattern.compile("^(.*)\\.kts?$"), Pattern.compile("^(.+)\\.fir\\.kts?$"), true);
             }
 
+            @TestMetadata("expectInterfaceApplicability.kt")
+            public void testExpectInterfaceApplicability() throws Exception {
+                runTest("compiler/testData/diagnostics/tests/multiplatform/expectInterfaceApplicability.kt");
+            }
+
             @TestMetadata("headerFunInNonHeaderClass.kt")
             public void testHeaderFunInNonHeaderClass() throws Exception {
                 runTest("compiler/testData/diagnostics/tests/multiplatform/headerFunInNonHeaderClass.kt");
