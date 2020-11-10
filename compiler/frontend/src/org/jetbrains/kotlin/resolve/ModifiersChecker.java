@@ -101,7 +101,6 @@ public class ModifiersChecker {
         return modality;
     }
 
-    /// TOOD NOW
     @NotNull
     private static Modality resolveModalityFromModifiers(
             @Nullable DeclarationDescriptor containingDescriptor,

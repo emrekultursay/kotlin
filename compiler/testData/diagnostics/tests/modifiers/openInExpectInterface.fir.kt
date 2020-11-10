@@ -5,7 +5,7 @@
 expect interface My {
     open fun bar()
     <!EXPECTED_DECLARATION_WITH_BODY!>open fun bas()<!> {}
-    <!INCOMPATIBLE_OPEN_AND_ABSTRACT_MODIFIER_IN_EXPECT_INTERFACE!><!REDUNDANT_MODIFIER!>open<!> abstract fun bat(): Int<!>
+    <!REDUNDANT_MODIFIER!>open<!> abstract fun bat(): Int
 
     fun foo()
 
