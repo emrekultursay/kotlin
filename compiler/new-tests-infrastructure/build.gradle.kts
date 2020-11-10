@@ -10,6 +10,8 @@ dependencies {
     testImplementation(intellijCoreDep()) { includeJars("intellij-core") }
     testImplementation(project(":kotlin-reflect"))
 
+    testImplementation(projectTests(":compiler:new-tests-infrastructure:new-test-generator"))
+
     testImplementation(platform("org.junit:junit-bom:5.7.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 
