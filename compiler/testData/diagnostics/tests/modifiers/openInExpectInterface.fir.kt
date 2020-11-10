@@ -26,3 +26,11 @@ class MyImpl2: My {
     override val e = 1 // TODO NOW
 }
 
+expect interface Outer {
+    interface Inner {
+        open fun bar()
+        <!EXPECTED_DECLARATION_WITH_BODY!>open fun bas()<!> {}
+        <!REDUNDANT_MODIFIER!>open<!> abstract fun bat(): Int
+        fun foo()
+    }
+}
