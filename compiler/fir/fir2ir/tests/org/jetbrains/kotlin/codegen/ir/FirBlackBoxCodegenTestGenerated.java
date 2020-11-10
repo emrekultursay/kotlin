@@ -16522,6 +16522,11 @@ public class FirBlackBoxCodegenTestGenerated extends AbstractFirBlackBoxCodegenT
                 KotlinTestUtils.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvm8/defaults"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
             }
 
+            @TestMetadata("annotatedJvmDefaultMethod.kt")
+            public void testAnnotatedJvmDefaultMethod() throws Exception {
+                runTest("compiler/testData/codegen/box/jvm8/defaults/annotatedJvmDefaultMethod.kt");
+            }
+
             @TestMetadata("bridgeInClass.kt")
             public void testBridgeInClass() throws Exception {
                 runTest("compiler/testData/codegen/box/jvm8/defaults/bridgeInClass.kt");
