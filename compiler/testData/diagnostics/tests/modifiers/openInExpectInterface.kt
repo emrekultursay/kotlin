@@ -23,7 +23,7 @@ expect interface My {
 class MyImpl2: My {
     override fun foo() {}
     override val f = 0
-    override val e = 1 // TODO NOW
+    override val e = 1
 }
 
 expect interface Outer {
