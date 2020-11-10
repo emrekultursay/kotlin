@@ -23,6 +23,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD, ElementType.TYPE})
+@org.junit.jupiter.api.Test
 public @interface TestMetadata {
     String value();
 }

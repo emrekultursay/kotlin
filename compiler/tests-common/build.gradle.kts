@@ -53,6 +53,10 @@ dependencies {
     testCompileOnly(project(":kotlin-reflect-api"))
     testCompileOnly(toolsJar())
     testCompileOnly(intellijCoreDep()) { includeJars("intellij-core") }
+
+    testImplementation(platform("org.junit:junit-bom:5.7.0"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+
     Platform[193].orLower {
         testCompile(intellijDep()) { includeJars("openapi", "picocontainer", rootProject = rootProject) }
     }

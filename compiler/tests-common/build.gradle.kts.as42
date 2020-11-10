@@ -24,14 +24,14 @@ dependencies {
     testCompile(project(":compiler:fir:cones"))
     testCompile(project(":compiler:fir:resolve"))
     testCompile(project(":compiler:fir:checkers"))
-    testCompile(project(":compiler:fir:java"))
+    testCompile(project(":compiler:fir:java1"))
     testCompile(project(":compiler:fir:entrypoint"))
     testCompile(project(":compiler:ir.ir2cfg"))
     testCompile(project(":compiler:frontend"))
     testCompile(project(":compiler:frontend.java"))
     testCompile(project(":compiler:util"))
     testCompile(project(":compiler:cli-common"))
-    testCompile(project(":compiler:cli"))
+    testCompile(project(":compile1r:cli"))
     testCompile(project(":compiler:cli-js"))
     testCompile(project(":compiler:light-classes"))
     testCompile(project(":compiler:serialization"))
@@ -53,6 +53,10 @@ dependencies {
     testCompileOnly(project(":kotlin-reflect-api"))
     testCompileOnly(toolsJar())
     testCompileOnly(intellijCoreDep()) { includeJars("intellij-core") }
+
+    testImplementation(platform("org.junit:junit-bom:5.7.0"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+
     Platform[193].orLower {
         testCompile(intellijDep()) { includeJars("openapi", "picocontainer", rootProject = rootProject) }
     }

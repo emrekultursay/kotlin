@@ -51,7 +51,6 @@ class SomeTest {
         useFrontendHandlers(::FirDumpHandler, ::FirDiagnosticsHandler)
     }
 
-    @Test
     @TestMetadata("a.kt")
     fun testFirAnalysisA() {
         val path = "compiler/new-tests-infrastructure/testData/a.kt"
@@ -87,7 +86,6 @@ class SomeTest {
         useFrontendHandlers(::DeclarationsDumpHandler, ::ClassicDiagnosticsHandler)
     }
 
-    @Test
     @TestMetadata("a.kt")
     fun testClassicAnalysisA() {
         testRunner(classicAnalysisConfiguration).runTest("compiler/new-tests-infrastructure/testData/a.kt")
@@ -112,25 +110,21 @@ class SomeTest {
         useArtifactsHandlers(::JvmBoxRunner)
     }
 
-    @Test
     @TestMetadata("boxTest.kt")
     fun testBBBoxTest() {
         testRunner(blackBoxRunnerConfiguration).runTest("compiler/new-tests-infrastructure/testData/boxTest.kt")
     }
 
-    @Test
     @TestMetadata("boxWithRuntimeTest.kt")
     fun testBBBoxWithRuntimeTest() {
         testRunner(blackBoxRunnerConfiguration).runTest("compiler/new-tests-infrastructure/testData/boxWithRuntimeTest.kt")
     }
 
-    @Test
     @TestMetadata("boxWithJdkTest.kt")
     fun testBBBoxWithJdkTest() {
         testRunner(blackBoxRunnerConfiguration).runTest("compiler/new-tests-infrastructure/testData/boxWithJdkTest.kt")
     }
 
-    @Test
     @TestMetadata("multiModuleBox.kt")
     fun testBBMultiModuleBox() {
         testRunner(blackBoxRunnerConfiguration).runTest("compiler/new-tests-infrastructure/testData/multiModuleBox.kt")
@@ -155,25 +149,21 @@ class SomeTest {
         useArtifactsHandlers(::JvmBoxRunner)
     }
 
-    @Test
     @TestMetadata("boxTest.kt")
     fun testFirBBBoxTest() {
         testRunner(firBlackBoxRunnerConfiguration).runTest("compiler/new-tests-infrastructure/testData/boxTest.kt")
     }
 
-    @Test
     @TestMetadata("boxWithRuntimeTest.kt")
     fun testFirBBBoxWithRuntimeTest() {
         testRunner(firBlackBoxRunnerConfiguration).runTest("compiler/new-tests-infrastructure/testData/boxWithRuntimeTest.kt")
     }
 
-    @Test
     @TestMetadata("boxWithJdkTest.kt")
     fun testFirBBBoxWithJdkTest() {
         testRunner(firBlackBoxRunnerConfiguration).runTest("compiler/new-tests-infrastructure/testData/boxWithJdkTest.kt")
     }
 
-    @Test
     @TestMetadata("multiModuleBox.kt")
     fun testFirBBMultiModuleBox() {
         testRunner(firBlackBoxRunnerConfiguration).runTest("compiler/new-tests-infrastructure/testData/multiModuleBox.kt")
@@ -194,7 +184,6 @@ class SomeTest {
         useFrontendHandlers(::DeclarationsDumpHandler, ::ClassicDiagnosticsHandler)
     }
 
-    @Test
     @TestMetadata("jsTest.kt")
     fun testJsBBjsTest() {
         testRunner(jsClassicBlackBoxRunnerConfiguration).runTest("compiler/new-tests-infrastructure/testData/jsTest.kt")
